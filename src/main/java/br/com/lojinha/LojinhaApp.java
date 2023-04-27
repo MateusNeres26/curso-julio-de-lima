@@ -3,6 +3,8 @@ package br.com.lojinha;
 import br.com.lojinha.enums.Tamanho;
 import br.com.lojinha.pojo.ItemIncluso;
 import br.com.lojinha.pojo.Produto;
+import br.com.lojinha.pojo.ProdutoInternacional;
+import br.com.lojinha.pojo.ProdutoNacional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +20,7 @@ public class LojinhaApp {
         Produto meuProduto = new Produto("Nestlé", Tamanho.MEDIO);
 
         meuProduto.setNome("Mateus Neres");
-        meuProduto.setValor(1);
+        meuProduto.setValor(30);
 
 
         List<ItemIncluso> itensInclusos = new ArrayList<>();
@@ -46,5 +48,13 @@ public class LojinhaApp {
         }
 
         System.out.println("Acabaram-se os itens");
+
+        ProdutoNacional meuProdutoNacional = new ProdutoNacional("Sony", Tamanho.MEDIO);
+        meuProdutoNacional.setImpostoNacional(0.55789);
+        System.out.println(meuProdutoNacional.getImpostoNacional());
+
+        ProdutoInternacional meuProdutoInternacional = new ProdutoInternacional("Sony", Tamanho.MEDIO);
+        meuProdutoInternacional.setValor(-100);
+
     }
 }

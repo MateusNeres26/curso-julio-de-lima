@@ -7,7 +7,7 @@ import java.util.List;
 public class Produto {
     private String nome;
     private String marca;
-    private double valor;
+    protected double valor;
     private Tamanho tamanho;
     private List<ItemIncluso> itensInclusos;
 
@@ -24,7 +24,7 @@ public class Produto {
         if (novoValor > 0) {
             this.valor = novoValor;
         } else {
-            throw new IllegalArgumentException("Insira um valor maior que 0");
+            throw new IllegalArgumentException("Valores devem ser maiores que 0");
             }
         }
     public String getNome(){
